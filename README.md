@@ -9,7 +9,7 @@ Trabalho do 2º bimestre de **Desenvolvimento Mobile**. App em React Native + Ex
 ## 1. Como abrir no Snack (snack.expo.dev)
 
 ### Opção A: importar do GitHub (recomendada)
-1. Crie um repositório **público** no GitHub e envie todos os arquivos desta pasta (App.js, package.json, app.json, index.js e a pasta `src`).
+1. Crie um repositório **público** no GitHub e envie todos os arquivos desta pasta (App.js, package.json, app.json e a pasta `src`).
 2. Acesse https://snack.expo.dev, abra o menu do projeto e escolha **Import git repository**.
 3. Cole a URL do repositório e confirme.
 4. Na barra inferior do Snack, selecione o **SDK 56** (se ele não estiver na lista, escolha o mais recente e aceite a atualização de dependências que o Snack sugerir).
@@ -20,6 +20,8 @@ Trabalho do 2º bimestre de **Desenvolvimento Mobile**. App em React Native + Ex
 3. Substitua o `package.json` e o `App.js` do Snack pelos deste projeto.
 
 > O preview funciona na **Web**, no **Android** e no **iOS** (via Expo Go, lendo o QR Code). Na Web o diálogo de confirmação usa um `Modal` próprio, porque o `Alert` nativo não funciona no navegador.
+
+> **Erro "No default export of 'index.js' to render!" no Android/iOS:** o Snack precisa que o ponto de entrada seja o `App.js`. Não deixe um arquivo `index.js` na raiz do projeto e não coloque o campo `"main"` no `package.json`.
 
 ### Rodar localmente (opcional)
 ```bash
