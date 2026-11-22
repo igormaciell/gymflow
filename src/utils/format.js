@@ -72,5 +72,12 @@ export function getInitials(name = '') {
 }
 
 // Normaliza texto para busca sem acento e sem maiúsculas
-export const normalizeText = (text = '') =>
-  String(text).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+export function normalizeText(text = '') {
+  const value = String(text).toLowerCase();
+  try {
+    return value.normalize('NFD').replace(new RegExp('[\\u0300-\\u036f]', 'g'), '');
+  } catch (error) {
+    // Se o aparelho não suportar normalize, busca sem remover acentos
+    return value;
+  }
+}
