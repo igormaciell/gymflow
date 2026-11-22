@@ -42,24 +42,36 @@ export function DataProvider({ children }) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
+  // Carrega um recurso sem deixar o erro "estourar": devolve { lista } ou { erro }
+  const loadResource = async (name) => {
+    try {
+      const list = await api[name].list();
+      return { name, list: Array.isArray(list) ? list : [] };
+    } catch (error) {
+      return { name, list: [], error: error.code || 'errors.generic' };
+    }
+  };
+
   const loadAll = useCallback(async () => {
     setLoading(true);
     setError(null);
-    // allSettled: se um recurso falhar, os outros continuam carregando
-    const results = await Promise.allSettled(RESOURCES.map((name) => api[name].list()));
-    const next = { ...EMPTY_DATA };
-    let firstError = null;
-    results.forEach((result, index) => {
-      const name = RESOURCES[index];
-      if (result.status === 'fulfilled' && Array.isArray(result.value)) {
-        next[name] = result.value.map(normalizers[name]);
-      } else if (!firstError) {
-        firstError = (result.reason && result.reason.code) || 'errors.generic';
-      }
-    });
-    setData(next);
-    setError(firstError);
-    setLoading(false);
+    try {
+      // Cada recurso trata o próprio erro, então se um falhar os outros continuam carregando
+      const results = await Promise.all(RESOURCES.map(loadResource));
+      const next = { ...EMPTY_DATA };
+      let firstError = null;
+      results.forEach(({ name, list, error }) => {
+        next[name] = list.map(normalizers[name]);
+        if (error && !firstError) firstError = error;
+      });
+      setData(next);
+      setError(firstError);
+    } catch (error) {
+      setError('errors.generic');
+    } finally {
+      // Garante que o indicador de carregamento sempre termina
+      setLoading(false);
+    }
   }, []);
 
   // Efeito colateral: carrega os dados quando alguém faz login e limpa no logout
