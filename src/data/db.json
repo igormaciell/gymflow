@@ -1,0 +1,47 @@
+{
+  "usuarios": [
+    { "id": "1", "nome": "Administrador GymFlow", "email": "admin@gymflow.com", "telefone": "(27) 99999-0000", "cargo": "admin", "senha": "123456", "criadoEm": "2026-08-01T10:00:00.000Z" },
+    { "id": "2", "nome": "Carla Mendes", "email": "carla@gymflow.com", "telefone": "(27) 98888-1111", "cargo": "instrutor", "senha": "123456", "criadoEm": "2026-09-12T14:30:00.000Z" },
+    { "id": "3", "nome": "Rafael Souza", "email": "rafael@gymflow.com", "telefone": "(27) 97777-2222", "cargo": "recepcao", "senha": "123456", "criadoEm": "2026-10-03T09:15:00.000Z" }
+  ],
+  "planos": [
+    { "id": "1", "nome": "Basic", "preco": 89.9, "periodo": "mensal", "descricao": "Musculação em horário livre.", "ativo": true },
+    { "id": "2", "nome": "Gold", "preco": 239.9, "periodo": "trimestral", "descricao": "Musculação + aulas coletivas.", "ativo": true },
+    { "id": "3", "nome": "Black", "preco": 449.9, "periodo": "semestral", "descricao": "Acesso total + avaliação física mensal.", "ativo": true },
+    { "id": "4", "nome": "Premium", "preco": 799.9, "periodo": "anual", "descricao": "Acesso total + personal 2x por semana.", "ativo": true }
+  ],
+  "treinos": [
+    { "id": "1", "nome": "Treino A - Peito e Tríceps", "categoria": "hipertrofia", "nivel": "intermediario", "duracao": 60, "descricao": "Foco em empurrar: peitoral e tríceps.", "exercicios": [ { "nome": "Supino reto", "series": 4, "repeticoes": 10 }, { "nome": "Supino inclinado com halteres", "series": 3, "repeticoes": 12 }, { "nome": "Crucifixo na máquina", "series": 3, "repeticoes": 12 }, { "nome": "Tríceps na polia", "series": 4, "repeticoes": 12 } ] },
+    { "id": "2", "nome": "Treino B - Costas e Bíceps", "categoria": "hipertrofia", "nivel": "intermediario", "duracao": 60, "descricao": "Foco em puxar: dorsais e bíceps.", "exercicios": [ { "nome": "Puxada frontal", "series": 4, "repeticoes": 10 }, { "nome": "Remada curvada", "series": 4, "repeticoes": 10 }, { "nome": "Rosca direta", "series": 3, "repeticoes": 12 } ] },
+    { "id": "3", "nome": "HIIT Queima Total", "categoria": "emagrecimento", "nivel": "avancado", "duracao": 30, "descricao": "Intervalado de alta intensidade.", "exercicios": [ { "nome": "Burpee", "series": 5, "repeticoes": 15 }, { "nome": "Polichinelo", "series": 5, "repeticoes": 30 }, { "nome": "Mountain climber", "series": 5, "repeticoes": 20 } ] },
+    { "id": "4", "nome": "Iniciante Full Body", "categoria": "funcional", "nivel": "iniciante", "duracao": 45, "descricao": "Adaptação para quem está começando.", "exercicios": [ { "nome": "Leg press", "series": 3, "repeticoes": 12 }, { "nome": "Supino máquina", "series": 3, "repeticoes": 12 }, { "nome": "Remada baixa", "series": 3, "repeticoes": 12 } ] },
+    { "id": "5", "nome": "Força 5x5", "categoria": "forca", "nivel": "avancado", "duracao": 75, "descricao": "Cargas altas e poucas repetições.", "exercicios": [ { "nome": "Agachamento livre", "series": 5, "repeticoes": 5 }, { "nome": "Levantamento terra", "series": 5, "repeticoes": 5 }, { "nome": "Desenvolvimento militar", "series": 5, "repeticoes": 5 } ] },
+    { "id": "6", "nome": "Funcional Core", "categoria": "funcional", "nivel": "iniciante", "duracao": 40, "descricao": "Estabilidade e fortalecimento do core.", "exercicios": [ { "nome": "Prancha", "series": 3, "repeticoes": 1 }, { "nome": "Abdominal bicicleta", "series": 3, "repeticoes": 20 }, { "nome": "Kettlebell swing", "series": 3, "repeticoes": 15 } ] },
+    { "id": "7", "nome": "Cardio Moderado", "categoria": "cardio", "nivel": "iniciante", "duracao": 35, "descricao": "Esteira e bike em intensidade moderada.", "exercicios": [ { "nome": "Esteira inclinada", "series": 1, "repeticoes": 20 }, { "nome": "Bike ergométrica", "series": 1, "repeticoes": 15 } ] },
+    { "id": "8", "nome": "Treino C - Pernas", "categoria": "hipertrofia", "nivel": "avancado", "duracao": 70, "descricao": "Quadríceps, posteriores e glúteos.", "exercicios": [ { "nome": "Agachamento livre", "series": 4, "repeticoes": 8 }, { "nome": "Cadeira extensora", "series": 4, "repeticoes": 12 }, { "nome": "Mesa flexora", "series": 4, "repeticoes": 12 }, { "nome": "Elevação pélvica", "series": 4, "repeticoes": 10 } ] }
+  ],
+  "alunos": [
+    { "id": "1", "nome": "Ana Beatriz Lima", "email": "ana.lima@email.com", "telefone": "(27) 99123-4567", "nascimento": "14/03/1998", "objetivo": "hipertrofia", "planoId": "2", "status": "ativo", "treinoId": "1", "checkins": 18, "observacoes": "", "criadoEm": "2026-08-10T10:00:00.000Z" },
+    { "id": "2", "nome": "Bruno Carvalho", "email": "bruno.c@email.com", "telefone": "(27) 98234-5678", "nascimento": "02/11/1990", "objetivo": "emagrecimento", "planoId": "1", "status": "ativo", "treinoId": "3", "checkins": 9, "observacoes": "Joelho direito sensível.", "criadoEm": "2026-08-22T10:00:00.000Z" },
+    { "id": "3", "nome": "Camila Rocha", "email": "camila.r@email.com", "telefone": "(27) 99345-6789", "nascimento": "25/07/2001", "objetivo": "condicionamento", "planoId": "3", "status": "ativo", "treinoId": "4", "checkins": 22, "observacoes": "", "criadoEm": "2026-09-01T10:00:00.000Z" },
+    { "id": "4", "nome": "Diego Fernandes", "email": "diego.f@email.com", "telefone": "(27) 98456-7890", "nascimento": "09/01/1987", "objetivo": "hipertrofia", "planoId": "4", "status": "ativo", "treinoId": "5", "checkins": 31, "observacoes": "", "criadoEm": "2026-09-05T10:00:00.000Z" },
+    { "id": "5", "nome": "Eduarda Martins", "email": "duda.m@email.com", "telefone": "(27) 99567-8901", "nascimento": "30/05/1995", "objetivo": "saude", "planoId": "1", "status": "pendente", "treinoId": "7", "checkins": 3, "observacoes": "Pagamento em atraso.", "criadoEm": "2026-09-18T10:00:00.000Z" },
+    { "id": "6", "nome": "Felipe Andrade", "email": "felipe.a@email.com", "telefone": "(27) 98678-9012", "nascimento": "17/12/1999", "objetivo": "hipertrofia", "planoId": "2", "status": "ativo", "treinoId": "8", "checkins": 15, "observacoes": "", "criadoEm": "2026-09-25T10:00:00.000Z" },
+    { "id": "7", "nome": "Gabriela Nunes", "email": "gabi.n@email.com", "telefone": "(27) 99789-0123", "nascimento": "08/08/1993", "objetivo": "emagrecimento", "planoId": "3", "status": "inativo", "treinoId": "3", "checkins": 0, "observacoes": "Trancou a matrícula.", "criadoEm": "2026-10-02T10:00:00.000Z" },
+    { "id": "8", "nome": "Henrique Alves", "email": "henrique.a@email.com", "telefone": "(27) 98890-1234", "nascimento": "21/04/2003", "objetivo": "condicionamento", "planoId": "1", "status": "ativo", "treinoId": "6", "checkins": 11, "observacoes": "", "criadoEm": "2026-10-10T10:00:00.000Z" },
+    { "id": "9", "nome": "Isabela Costa", "email": "isa.costa@email.com", "telefone": "(27) 99901-2345", "nascimento": "11/10/1997", "objetivo": "saude", "planoId": "2", "status": "ativo", "treinoId": "6", "checkins": 7, "observacoes": "", "criadoEm": "2026-10-20T10:00:00.000Z" },
+    { "id": "10", "nome": "João Pedro Silva", "email": "jp.silva@email.com", "telefone": "(27) 98012-3456", "nascimento": "05/06/2000", "objetivo": "hipertrofia", "planoId": "4", "status": "pendente", "treinoId": "2", "checkins": 5, "observacoes": "", "criadoEm": "2026-11-01T10:00:00.000Z" },
+    { "id": "11", "nome": "Larissa Pereira", "email": "lari.p@email.com", "telefone": "(27) 99112-2334", "nascimento": "19/02/1992", "objetivo": "emagrecimento", "planoId": "1", "status": "ativo", "treinoId": "7", "checkins": 13, "observacoes": "", "criadoEm": "2026-11-08T10:00:00.000Z" },
+    { "id": "12", "nome": "Marcos Vinícius", "email": "marcos.v@email.com", "telefone": "(27) 98223-3445", "nascimento": "27/09/1985", "objetivo": "saude", "planoId": "3", "status": "inativo", "treinoId": "4", "checkins": 0, "observacoes": "", "criadoEm": "2026-11-15T10:00:00.000Z" }
+  ],
+  "aulas": [
+    { "id": "1", "modalidade": "spinning", "instrutor": "Carla Mendes", "dia": "seg", "horario": "07:00", "duracao": 45, "vagas": 20, "inscritos": 17, "sala": "Sala 1" },
+    { "id": "2", "modalidade": "yoga", "instrutor": "Paula Ribeiro", "dia": "seg", "horario": "18:30", "duracao": 60, "vagas": 15, "inscritos": 9, "sala": "Sala 2" },
+    { "id": "3", "modalidade": "crossfit", "instrutor": "Thiago Moraes", "dia": "ter", "horario": "06:30", "duracao": 50, "vagas": 12, "inscritos": 12, "sala": "Box" },
+    { "id": "4", "modalidade": "pilates", "instrutor": "Paula Ribeiro", "dia": "qua", "horario": "09:00", "duracao": 55, "vagas": 10, "inscritos": 6, "sala": "Sala 2" },
+    { "id": "5", "modalidade": "zumba", "instrutor": "Carla Mendes", "dia": "qui", "horario": "19:00", "duracao": 60, "vagas": 25, "inscritos": 21, "sala": "Sala 1" },
+    { "id": "6", "modalidade": "funcional", "instrutor": "Thiago Moraes", "dia": "sex", "horario": "17:30", "duracao": 45, "vagas": 18, "inscritos": 10, "sala": "Área externa" },
+    { "id": "7", "modalidade": "spinning", "instrutor": "Carla Mendes", "dia": "sab", "horario": "09:00", "duracao": 45, "vagas": 20, "inscritos": 14, "sala": "Sala 1" },
+    { "id": "8", "modalidade": "yoga", "instrutor": "Paula Ribeiro", "dia": "qua", "horario": "07:30", "duracao": 60, "vagas": 15, "inscritos": 4, "sala": "Sala 2" }
+  ]
+}

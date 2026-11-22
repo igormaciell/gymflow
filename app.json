@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "GymFlow",
+    "slug": "gymflow",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "backgroundColor": "#F5F6FA",
+    "primaryColor": "#14213D"
+  }
+}
